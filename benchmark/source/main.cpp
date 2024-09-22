@@ -1,15 +1,12 @@
 #include <benchmark/benchmark.h>
-#include <print>
-
-// TODO: Add the compile comands for using the includes
+#include <greeter/greeter.h>
 
 static void BM_SomeFunction(benchmark::State& state) {
   // Perform setup here
   for (auto _ : state) {
     // This code gets timed
-    int x = 0;
-    int y = 0;
-    std::println("Hey bro");
+    greeter::Greeter g {"Greeter"};
+    const auto s = g.greet();
   }
 }
 // Register the function as a benchmark

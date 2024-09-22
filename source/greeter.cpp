@@ -1,4 +1,4 @@
-#include <fmt/format.h>
+#include <format>
 #include <greeter/greeter.h>
 
 using namespace greeter;
@@ -9,12 +9,12 @@ std::string Greeter::greet(LanguageCode lang) const {
   switch (lang) {
     default:
     case LanguageCode::EN:
-      return fmt::format("Hello, {}!", name);
+      return std::format("Hello, {}!", name);
     case LanguageCode::DE:
-      return fmt::format("Hallo {}!", name);
+      return std::format("Hallo {}!", name);
     case LanguageCode::ES:
-      return fmt::format("¡Hola {}!", name);
+      return std::format("¡Hola {}!", name);
     case LanguageCode::FR:
-      return fmt::format("Bonjour {}!", name);
+      return std::format("Bonjour {}!", name);
   }
 }

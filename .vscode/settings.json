@@ -4,6 +4,7 @@
     "C_Cpp.default.compilerPath": "/usr/bin/g++",
     "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
     "files.associations": {
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "iostream": "cpp"
     }
 }

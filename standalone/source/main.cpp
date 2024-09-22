@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <unordered_map>
+#include <print>
 
 auto main(int argc, char** argv) -> int {
   const std::unordered_map<std::string, greeter::LanguageCode> languages{

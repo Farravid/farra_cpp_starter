@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.14...3.22)
 
-project(Test LANGUAGES CXX)
+project(Greeter_test LANGUAGES CXX)
+set(CMAKE_PREFIX_PATH "${CMAKE_SOURCE_DIR}/../build")
 
 # ---- Options ----
 
@@ -15,7 +16,7 @@ include(../cmake/tools.cmake)
 
 include(../cmake/CPM.cmake)
 
-CPMAddPackage("gh:google/googletest@1.15.2")
+find_package(GTest REQUIRED)
 
 if(TEST_INSTALLED_VERSION)
   find_package(Greeter REQUIRED)
@@ -27,7 +28,7 @@ endif()
 
 file(GLOB sources CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/source/*.cpp)
 add_executable(${PROJECT_NAME} ${sources})
-target_link_libraries(${PROJECT_NAME} gtest Greeter::Greeter)
+target_link_libraries(${PROJECT_NAME} Greeter::Greeter gtest::gtest)
 set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 23)
 
 # enable compiler warnings

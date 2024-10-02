@@ -1,3 +1,6 @@
 /build*
 /cpm_modules
 .DS_Store
+
+# CMake
+CMakeUserPresets.json

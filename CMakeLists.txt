@@ -3,11 +3,14 @@ cmake_minimum_required(VERSION 3.14...3.22)
 # ---- Project ----
 
 # Note: update this to your new project's name and version
-project(
-  Greeter
+project(Greeter
   VERSION 1.0
   LANGUAGES CXX
 )
+
+# ---- Options ----
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # ---- Include guards ----
 

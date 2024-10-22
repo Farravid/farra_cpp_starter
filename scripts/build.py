@@ -73,7 +73,7 @@ def install_conan_dependencies(force_install):
     elif os.path.isdir('./build'):
         return
     
-    subprocess.run("conan install . --output-folder=build --build=missing", shell=True)
+    subprocess.run("conan install . --output-folder=build --build=missing -pr=./conan_profile", shell=True)
 
 def get_cmake_project_name():
     with open('./CMakeLists.txt', 'r') as cmake_file:

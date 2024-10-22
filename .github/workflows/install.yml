@@ -32,6 +32,7 @@ jobs:
 
       - name: build and install library
         run: |
+          conan profile detect
           pip install inquirer
           python ./scripts/build.py -d
  #         # cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release

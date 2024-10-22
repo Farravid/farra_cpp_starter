@@ -28,6 +28,7 @@ jobs:
 
       - name: build and install library
         run: |
+          pip install inquirer
           python ./scripts/build.py -d
  #         # cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release
  #         # sudo cmake --build build --target install
